@@ -3,7 +3,6 @@ rpcLaos: wss://rpc.laossigma.laosfoundation.io
 laosGlobalConsensus: "0:0x77afd6190f1554ad45fd0d31aee62aacc33c6db0ea801129acb813f913e0764f"
 laosParachain: "4006"
 laosPalletInstance: "51"
-startingBlockLaos: "1"
 indexerInstances:
   - dbPodName: indexer-db-polygon
     postgresDb: squid
@@ -17,6 +16,7 @@ indexerInstances:
     ownershipProcessor: indexer-polygon-processor
     gatewayEndpoint: https://v2.archive.subsquid.io/network/polygon-mainnet
     startingBlockOwnership: "59689828"
+    startingBlockLaos: "1"
     rpcEndpointSecretKey: "indexerPolygonRpcEndpoint"
     laosProcessor: indexer-laos-processor-polygon
     apiProcessor: indexer-laos-polygon-api
@@ -34,6 +34,7 @@ indexerInstances:
     ownershipProcessor: indexer-ethereum-processor
     gatewayEndpoint: https://v2.archive.subsquid.io/network/ethereum-mainnet
     startingBlockOwnership: "20365510"
+    startingBlockLaos: "1"
     rpcEndpointSecretKey: "indexerEthereumRpcEndpoint"
     laosProcessor: indexer-laos-processor-ethereum
     apiProcessor: indexer-laos-ethereum-api
