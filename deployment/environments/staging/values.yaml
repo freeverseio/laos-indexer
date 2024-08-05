@@ -39,3 +39,20 @@ indexerInstances:
     apiProcessor: indexer-laos-ethereum-api
     host: testnet.ethereum-indexer.laosnetwork.io
     gqlPort: 4000
+  - dbPodName: indexer-db-hedera
+    postgresDb: squid-hedera
+    postgresPassword: postgres
+    postgresUser: postgres
+    pvcName: pvc-squid-hedera-1
+    servicePort: 5434
+    containerPort: 5434
+    mountPath: /var/lib/postgresql/pvdata3
+    mountName: indexer-pvc-hedera
+    ownershipProcessor: indexer-hedera-processor
+    gatewayEndpoint: https://testnet.hashio.io/api
+    startingBlockOwnership: "67417180"
+    rpcEndpointSecretKey: "indexerHederaRpcEndpoint"
+    laosProcessor: indexer-laos-processor-hedera
+    apiProcessor: indexer-laos-hedera-api
+    host: testnet.hedera-indexer.laosnetwork.io
+    gqlPort: 4000
