@@ -23,20 +23,26 @@ A custom GraphQL API retrieves real-time information from the two independent so
 
 Follow these steps to set up and run the LAOS Indexer:
 
+1. **Create a `.env` file**:
+   - Use `example.env` as a reference.
+   - Select either LAOS Testnet or LAOS Mainnet.
+   - Provide the appropriate ownership chain RPC endpoint.
+   - Note: Public RPC endpoints often have transaction limits.
+
+2. **Execute the following commands**:
+
 ```bash
-# 0. Install @subsquid/cli (sqd command) globally
+# 1. Install @subsquid/cli globally (sqd command)
 npm i -g @subsquid/cli
 
-# 1. Install dependencies
+# 2. Install dependencies
 npm ci
 
-# 2. Clean previous processes
+# 3. Clean previous processes
 sqd clean:all
 
-# 3. Build and start the processor
+# 4. Build and start the processor
 sqd run .
-
-
 ```
 
 A GraphiQL playground will be available at http://localhost:4350/graphql.
