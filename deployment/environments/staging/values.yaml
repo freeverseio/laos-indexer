@@ -51,7 +51,7 @@ indexerInstances:
     mountName: indexer-pvc-hedera
     ownershipProcessor: indexer-hedera-processor
     gatewayEndpoint: https://testnet.hashio.io/api
-    startingBlockOwnership: "7334099"
+    startingBlockOwnership: "7333998"
     startingBlockLaos: "67720"
     rpcEndpointSecretKey: "indexerHederaRpcEndpoint"
     laosProcessor: indexer-laos-processor-hedera
